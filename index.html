@@ -13,13 +13,21 @@
     .show{
         display: block;
     }
+    #back_to_top{
+      top:21000px;
+      position: relative;
+    }
 </style>
 </head>
 <body>
 <!-- <button id="btn_hide">非表示にする</button>
 <button id="btn_show">表示する</button> -->
 <button>表示・非表示の切り替え</button>
+<h1>テストテキスト</h1>
 <p>テキストテキストテキスト</p>
+<button id="btn2">ここを押すとアラートが出ます(イベントプロパティ利用)</button>
+<p id="back_to_top">TOPへ戻る</p>
+
 <script type="text/javascript">
 // $(function(){
 //     $('button').on('click', function() {
@@ -34,23 +42,47 @@
 //         $('p').show()
 //     })
 // })
-$(function(){
-    $('button').on('click', function(){
-      const className = $('p').prop('class')
-    if (className === 'show') {
-       $('p').removeClass('show')
-       $('p').addClass('hide')
-     } else {
-       // 5. hideクラスが付いてたら、「hideクラスを外して(removeClass)、showクラスをつける(addClass)」
-       $('p').removeClass('hide')
-       $('p').addClass('show')
-     }
+// $(function(){
+//     $('button').on('click', function(){
+//       const className = $('p').prop('class')
+//     if (className === 'show') {
+//        $('p').removeClass('show')
+//        $('p').addClass('hide')
+//      } else {
+//        // 5. hideクラスが付いてたら、「hideクラスを外して(removeClass)、showクラスをつける(addClass)」
+//        $('p').removeClass('hide')
+//        $('p').addClass('show')
+//      }
 
 
-    })
-})
+//     })
+// })
 
+// $(function(){
+//   $('button').on('click', function(){
+//     $('h1').toggle()
+//   })
+// })
 
+// $(function(){
+//    $('#back_to_top').on('click',function(){
+//      $('body, html').animate({
+//        scrollTop:0 
+//      }, 50000)
+//    })
+// })
+
+const btn2 = document.getElementById('btn2')
+btn2.onclick = sayHello
+btn2.onclick = sayYeah
+
+function sayHello(){
+  alert('こんにちは')
+}
+
+function sayYeah(){
+  alert('おはようございます')
+}
 
 </script>
 </body>
