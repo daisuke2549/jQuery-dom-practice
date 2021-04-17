@@ -27,6 +27,9 @@
 <p>テキストテキストテキスト</p>
 <button id="btn2">ここを押すとアラートが出ます(イベントプロパティ利用)</button>
 <p id="back_to_top">TOPへ戻る</p>
+<button id="hidden">文字を非表示にする</button>
+<p id="target">文字を非表示にする</p>
+
 
 <script type="text/javascript">
 // $(function(){
@@ -72,18 +75,35 @@
 //    })
 // })
 
-const btn2 = document.getElementById('btn2')
-btn2.onclick = sayHello
-btn2.onclick = sayYeah
+// const btn2 = document.getElementById('btn2')
+// btn2.onclick = sayHello
+// btn2.onclick = sayYeah
 
-function sayHello(){
-  alert('こんにちは')
+// function sayHello(){
+//   alert('こんにちは')
+// }
+
+// function sayYeah(){
+//   alert('おはようございます')
+// }
+
+
+const target = document.getElementById("target")
+
+const hidden = document.getElementById("hidden")
+
+hidden.addEventListener('click', hiddenTarget)
+
+
+function hiddenTarget(){
+  target.style.display = "none"
 }
 
-function sayYeah(){
-  alert('おはようございます')
-}
+
+
+
 
 </script>
+<script src="./js/main.js"></script>
 </body>
 </html>
